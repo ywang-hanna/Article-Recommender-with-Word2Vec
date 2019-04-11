@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<style type="text/css">
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+
+<h1 style="">Articles</h1>
+
+{% for art in articles %}
+<p><a href={{ url_for('article', topic=topics[loop.index0], filename=filenames[loop.index0]) }}> {{ art[1] }} </a> </p>
+{% endfor %}
+
+
+
+</body>
+</html>
